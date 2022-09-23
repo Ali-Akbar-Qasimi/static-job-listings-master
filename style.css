@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eef6f6;
+}
+
+.container .header {
+  width: 100%;
+  background-color: #5ba4a4;
+  height: 30vh;
+  background-image: url(./images/bg-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container .sub-container .filter-container {
+  bottom: 10%;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+  background-color: white;
+  margin-inline: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  margin-top: -20px;
+  -webkit-box-shadow: 0px 5px 11px 1px #7b8e8e;
+          box-shadow: 0px 5px 11px 1px #7b8e8e;
+}
+
+.container .sub-container .filter-container .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .sub-container .filter-container .filter div {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: #eef6f6;
+}
+
+.container .sub-container .filter-container .filter div .text {
+  padding-left: 10px;
+  padding-block: 10px;
+  width: 100%;
+}
+
+.container .sub-container .filter-container .filter div span {
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 15px;
+  width: 20%;
+  background-color: #5ba4a4;
+}
+
+.container .sub-container .filter-container .clear {
+  cursor: pointer;
+}
+
+.container .sub-container .cards {
+  width: 100%;
+  padding-inline: 40px;
+  padding-block: 60px;
+  padding-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+
+.container .sub-container .cards .card {
+  background-color: #effafa;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  overflow-inline: hidden;
+  -webkit-box-shadow: 0 10px 20px 0px #7b8e8e;
+          box-shadow: 0 10px 20px 0px #7b8e8e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .sub-container .cards .card:first-child {
+  margin-top: 10px;
+}
+
+.container .sub-container .cards .card .left-border {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  background-color: #5ba4a4;
+}
+
+.container .sub-container .cards .card .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding-block: 20px;
+}
+
+.container .sub-container .cards .card .information .logo {
+  margin-top: -80px;
+  width: 70px;
+}
+
+.container .sub-container .cards .card .information .company-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .sub-container .cards .card .information .company-information .company-name {
+  color: #5ba4a4;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.container .sub-container .cards .card .information .company-information .new {
+  margin-left: 10%;
+  background-color: #5ba4a4;
+  color: white;
+  padding: 5px 10px;
+  padding-top: 7px;
+  border-radius: 20px;
+}
+
+.container .sub-container .cards .card .information .company-information .featured {
+  margin-left: 10px;
+  padding: 5px 10px;
+  padding-top: 7px;
+  background-color: #2c3a3a;
+  color: white;
+  border-radius: 20px;
+}
+
+.container .sub-container .cards .card .information .position {
+  color: #2c3a3a;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.container .sub-container .cards .card .information .more-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7b8e8e;
+}
+
+.container .sub-container .cards .card .information .more-information .dot {
+  width: 5px;
+  height: 5px;
+  background-color: #7b8e8e;
+  border-radius: 100%;
+}
+
+.container .sub-container .cards .card .roles {
+  border-top: 1px solid #7b8e8e;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .sub-container .cards .card .roles .role {
+  padding: 10px 20px;
+  background-color: #8dc4c146;
+  color: #5ba4a4;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .container .header {
+    background-image: url(./images/bg-header-desktop.svg);
+    background-size: cover;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container .sub-container {
+    padding-inline: 100px;
+  }
+  .container .sub-container .cards {
+    gap: 30px;
+  }
+  .container .sub-container .cards .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px;
+    padding-block: 0;
+  }
+  .container .sub-container .cards .card .information {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4;
+        grid-template-columns: 4;
+    -ms-grid-rows: 3;
+        grid-template-rows: 3;
+        grid-template-areas: 'logo company-name new featured' 'logo position position position' 'logo more-information more-information more-information';
+  }
+  .container .sub-container .cards .card .information .logo {
+    margin-top: 0;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  .container .sub-container .cards .card .information .company-information .company-name {
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: company-name;
+  }
+  .container .sub-container .cards .card .information .company-information .new {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: new;
+  }
+  .container .sub-container .cards .card .information .company-information .featured {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: featured;
+  }
+  .container .sub-container .cards .card .information .position {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: position;
+  }
+  .container .sub-container .cards .card .information .more-information {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: more-information;
+  }
+  .container .sub-container .cards .card .roles {
+    border-top: 0px solid transparent;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

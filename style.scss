@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);
+
+//### Neutral
+
+$Background: hsl(180, 52%, 96%);// (Background)
+$LightGrayishCyan : hsl(180, 31%, 95%);//(Filter Tablets)
+$DarkGrayishCyan: hsl(180, 8%, 52%);
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $LightGrayishCyan;
+    .header{
+        width: 100%;
+        background-color: $DesaturatedDarkCyan;
+        height: 30vh;
+        background-image: url(./images/bg-header-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .sub-container{
+        .filter-container{
+            bottom: 10%;
+            display: none;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: white;
+            margin-inline: 30px;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: -20px;
+            box-shadow: 0px 5px 11px 1px $DarkGrayishCyan;
+            .filter{
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                div{
+                    width: max-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 5px;
+                    background-color: $LightGrayishCyan;
+                    .text{
+                        padding-left: 10px;
+                        padding-block: 10px;
+                        width: 100%;
+                    }
+                    span{
+                        cursor: pointer;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px 15px;
+                        width: 20%;
+                        background-color: $DesaturatedDarkCyan;
+                    }
+                }
+            }
+            .clear{
+                cursor: pointer;
+            }
+        }
+        .cards{
+            width: 100%;
+            padding-inline: 40px;
+            padding-block: 60px;
+            padding-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            .card{
+                &:first-child{
+                    margin-top: 10px;
+                }
+                background-color: $Background;
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                overflow-inline: hidden;
+                box-shadow: 0 10px 20px 0px $DarkGrayishCyan;
+                display: flex;
+                flex-direction: column;
+                .left-border{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 5px;
+                    background-color: $DesaturatedDarkCyan;
+                }
+                .information{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-block: 20px;
+                    .logo{
+                        margin-top: -80px;
+                        width: 70px;
+                    }
+                    .company-information{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        .company-name{
+                            color: $DesaturatedDarkCyan;
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                        .new{
+                            margin-left: 10%;
+                            background-color: $DesaturatedDarkCyan;
+                            color: white;
+                            padding: 5px 10px;
+                            padding-top: 7px;
+                            border-radius: 20px;
+                        }
+                        .featured{
+                            margin-left: 10px;
+                            padding: 5px 10px;
+                            padding-top: 7px;
+                            background-color: $VeryDarkGrayishCyan;
+                            color: white;
+                            border-radius: 20px;
+                        }
+                    }
+                    .position{
+                        color: $VeryDarkGrayishCyan;
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+                    .more-information{
+                        display: flex;
+                        width: 100%;
+                        gap: 10px;
+                        align-items: center;
+                        color: $DarkGrayishCyan;
+                        .dot{
+                            width: 5px;
+                            height: 5px;
+                            background-color: $DarkGrayishCyan;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+                .roles{
+                    border-top: 1px solid $DarkGrayishCyan;
+                    padding-top: 20px;
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    .role{
+                        padding: 10px 20px;
+                        background-color: #8dc4c146;
+                        color: $DesaturatedDarkCyan;
+                        font-weight: 700;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:800px){
+    .container{
+        .header{
+            background-image: url(./images/bg-header-desktop.svg);
+            background-size: cover;
+            height: 20vh;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .sub-container{
+            padding-inline: 100px;
+            .cards{
+                gap: 30px;
+                .card{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 30px;
+                    padding-block: 0;
+                    .information{
+                        display: grid;
+                        grid-template-columns: 4;
+                        grid-template-rows: 3;
+                        grid-template-areas: 
+                            'logo company-name new featured'
+                            'logo position position position'
+                            'logo more-information more-information more-information'
+                        ;
+                        .logo{
+                            margin-top: 0;
+                            grid-area: logo;
+                        }
+                        .company-information{
+                            .company-name{
+                                width: 100%;
+                                grid-area: company-name;
+                            }
+                            .new{
+                                grid-area: new;
+                            }
+                            .featured{
+                                grid-area: featured;
+                            }
+                        }
+                        .position{
+                            grid-area: position;
+                        }
+                        .more-information{
+                            grid-area: more-information;
+                        }
+                    }
+                    .roles{
+                        border-top: 0px solid transparent;
+                        align-items: center;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
